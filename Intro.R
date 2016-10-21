@@ -2,11 +2,12 @@
 
 # Instalacion
 
-install.packages(c("installr", "Rcpp"), dependencies = TRUE)
-library('Rcpp')
+install.packages(c("installr", "Rcpp", "inline"), dependencies = TRUE)
 devtools::install_github('talgalili/installr')
 install.Rtools()
 
+library('Rcpp')
+library('inline')
 
 sourceCpp("pares.cpp")
 
